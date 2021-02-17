@@ -14,6 +14,8 @@
     "node": ">= 10"
   },
   "dependencies": {
-    "eslint-config-airbnb-base": "^14.2.1"
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1"
   }
 }
