@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     // Include rules from standard that are not in airbnb:
     // https://github.com/transloadit/node-sdk/issues/90
+    ////////////////////////////////////////////////////////////
     'accessor-pairs': ['error', { setWithoutGet: true, enforceForClassMembers: true }],
     'default-case-last': 'error',
     'no-extra-parens': ['error', 'functions'],
@@ -41,11 +42,13 @@ module.exports = {
     'promise/param-names': 'error',
 
     // Selectively override certain airbnb rules from standard:
+    ////////////////////////////////////////////////////////////
     'object-curly-newline': ['error', { multiline: true, consistent: true }],
     'space-before-function-paren': ['error', 'always'],
     semi: ['error', 'never'],
 
     // Override/disable certain airbnb rules:
+    ////////////////////////////////////////////////////////////
     'max-classes-per-file': 0,
     'max-len': 0,
     'no-plusplus': 0,
@@ -74,7 +77,8 @@ module.exports = {
       },
     ],
 
-    // transloadit custom rules:
+    // rules imported from the content repo:
+    ////////////////////////////////////////////////////////////
     'key-spacing': [
       'error',
       {
@@ -131,23 +135,38 @@ module.exports = {
     //   const ifReadOnly = this.props.credential ? true : false
     // may be easier to parse than
     //   const ifReadOnly = !!this.props.credential
-    'no-unneeded-ternary': 'off',
+    'no-unneeded-ternary': 0,
 
     // It's true that we'd generally like to use object.property, but this.state.formState is usually better read when we read this.state.formState['property'].
-    'dot-notation': 'off',
-    camelcase: 'off',
-    'no-console': 'off',
-    'no-fallthrough': 'off',
-    'no-multi-spaces': 'off',
-    'no-multi-str': 'off',
-    'no-template-curly-in-string': 'off',
-    'no-useless-escape': 'off',
-    'node/no-path-concat': 'off',
-    'prefer-import/prefer-import-over-require': 'off',
-    'react/display-name': 'off',
+    'dot-notation': 0,
+    camelcase: 0,
+    'no-console': 0,
+    'no-fallthrough': 0,
+    'no-multi-spaces': 0,
+    'no-multi-str': 0,
+    'no-template-curly-in-string': 0,
+    'no-useless-escape': 0,
+    'node/no-path-concat': 0,
+    'prefer-import/prefer-import-over-require': 0,
     'react/no-unused-prop-types': 'error',
-    'react/prop-types': 'off',
-    'react/require-render-return': 'off',
-    // "no-unused-vars": "off",
+    'react/prop-types': 0,
+    'react/require-render-return': 0,
+    // "no-unused-vars": 0,
+
+    // rules i disagree with
+    ////////////////////////////////////////////////////////////
+    'no-underscore-dangle': 0, // <-- not sure what is the benefit, and many fails
+    'no-continue': 0, // <-- continue allows for 'early exits' vs deep nesting which reduces cognitive load
+    'arrow-body-style': 0, // <-- allowing structure sometimes can make code more readable for a single long line imho
+    'no-cond-assign': 0, // <-- can be useful with if ((m = x.match())) { // handle matches }
+    'react/jsx-closing-tag-location': 0, // <-- autofix conflicts with react/jsx-indent, causing ugly code fix in e.g. langEn.js
+    'semi-style': 0, // <-- i think `;(async ()` is an okay pattern, and its autofix conflicted with import/newline-after-import
+
+    // rules i can see the value of but don't want to fail on right now
+    ////////////////////////////////////////////////////////////
+    'import/extensions': ['warn'],
+    'no-alert': ['warn'],
+    'no-restricted-properties': ['warn'],
+    'default-case': ['warn'],
   },
 };
