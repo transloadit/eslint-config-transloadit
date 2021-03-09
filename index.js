@@ -39,6 +39,7 @@ module.exports = {
     'max-classes-per-file': 0,
     'max-len'             : 0,
     'no-plusplus'         : 0,
+    'one-var'             : 0,
     'no-underscore-dangle': [
       'error', {
         allow               : [],
