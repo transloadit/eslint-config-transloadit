@@ -81,5 +81,13 @@ module.exports = {
       },
     ],
     'no-multi-spaces': 0,
+    'max-len': [
+      'warn',
+      {
+        'code': 125,
+        'comments': 125,
+        'ignoreStrings': true,
+        'ignoreTemplateLiterals': true
+      }]
   },
 }
