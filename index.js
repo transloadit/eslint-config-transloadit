@@ -1,11 +1,5 @@
 module.exports = {
   extends: 'airbnb',
-  parserOptions: {
-    ecmaVersion: 2020,
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
   env: {
     es6: true,
     jest: true,
@@ -16,8 +10,16 @@ module.exports = {
     'promise',
     'react',
     'prefer-import',
+    '@babel/eslint-plugin',
+    'jest',
   ],
   parser: '@babel/eslint-parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   rules: {
     // Include rules from standard that are not in airbnb:
     // https://github.com/transloadit/node-sdk/issues/90
@@ -28,7 +30,7 @@ module.exports = {
     'no-import-assign': 'error',
     'no-loss-of-precision': 'error',
     'no-unmodified-loop-condition': 'error',
-    'no-unreachable-loop': 'error',
+    'no-unreachable-loop': 'warn',
     'no-useless-backreference': 'error',
     'no-useless-call': 'error',
     'node/handle-callback-err': ['error', '^(err|error)$'],
@@ -38,7 +40,7 @@ module.exports = {
     'node/no-new-require': 'error',
     'node/no-path-concat': 'error',
     'node/process-exit-as-throw': 'error',
-    'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
+    'prefer-regex-literals': ['warn', { disallowRedundantWrapping: true }],
     'promise/param-names': 'error',
 
     // Selectively override certain airbnb rules from standard:
@@ -77,6 +79,12 @@ module.exports = {
       },
     ],
 
+    // rules imported from the api repo:
+    ////////////////////////////////////////////////////////////
+    'strict': ['error', 'global'],
+    "array-callback-return": "warn",
+    'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
+
     // rules imported from the content repo:
     ////////////////////////////////////////////////////////////
     'key-spacing': [
@@ -94,7 +102,6 @@ module.exports = {
         },
       },
     ],
-    'no-multi-spaces': 0,
     'max-len': [
       'warn',
       {
@@ -122,20 +129,6 @@ module.exports = {
         functions: 'never',
       },
     ],
-    // Primarily for the
-    // ifSmth ?
-    //   <div props props/> :
-    //   <spam props props/>
-    // syntax to look symmetrical.
-    'operator-linebreak': ['error', 'after'],
-    // Can't find a way to enable beautiful <>{(closeModal) => }</> indentation :-/
-    // "indent": ["error", 2, {"FunctionExpression": { "body": 0 }}]
-
-    // Because
-    //   const ifReadOnly = this.props.credential ? true : false
-    // may be easier to parse than
-    //   const ifReadOnly = !!this.props.credential
-    'no-unneeded-ternary': 0,
 
     // It's true that we'd generally like to use object.property, but this.state.formState is usually better read when we read this.state.formState['property'].
     'dot-notation': 0,
@@ -151,9 +144,8 @@ module.exports = {
     'react/no-unused-prop-types': 'error',
     'react/prop-types': 0,
     'react/require-render-return': 0,
-    // "no-unused-vars": 0,
 
-    // rules i disagree with
+    // rules i disagree with or had problems with
     ////////////////////////////////////////////////////////////
     'no-underscore-dangle': 0, // <-- not sure what is the benefit, and many fails
     'no-continue': 0, // <-- continue allows for 'early exits' vs deep nesting which reduces cognitive load
@@ -161,6 +153,11 @@ module.exports = {
     'no-cond-assign': 0, // <-- can be useful with if ((m = x.match())) { // handle matches }
     'react/jsx-closing-tag-location': 0, // <-- autofix conflicts with react/jsx-indent, causing ugly code fix in e.g. langEn.js
     'semi-style': 0, // <-- i think `;(async ()` is an okay pattern, and its autofix conflicted with import/newline-after-import
+    'arrow-parens': 0, // <-- js already complains if you don't add parens when you must. adding these seems superfluous to me, like adding semicolons when you don't have to, and a linter/parse error has your back
+    'operator-linebreak': ['error', 'before'], // <-- easier to see if it is before, to me
+    'newline-per-chained-call': 0, // <-- 3 are allowed, but then autofix introduces a cut-off for the fourth. it's weird. let's leave this up to the dev
+    "react/display-name": 0, // <-- autofix sprinkles parse errors in our code like /home/kvz/code/content/_assets/javascripts/langEn.js: Unexpected token, expected "," (52:51)
+    "react/jsx-filename-extension": 0, // <-- we're super heavy users of jsx in .js
 
     // rules i can see the value of but don't want to fail on right now
     ////////////////////////////////////////////////////////////
