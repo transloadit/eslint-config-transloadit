@@ -9,18 +9,17 @@ module.exports = {
     'promise',
   ],
   rules: {
-    // Include rules in standard that are not in airbnb:
+    // Include rules from standard that are not in airbnb:
     // https://github.com/transloadit/node-sdk/issues/90
     'accessor-pairs'              : ['error', { setWithoutGet: true, enforceForClassMembers: true }],
     'default-case-last'           : 'error',
-    'no-useless-backreference'    : 'error',
     'no-extra-parens'             : ['error', 'functions'],
     'no-import-assign'            : 'error',
     'no-loss-of-precision'        : 'error',
     'no-unmodified-loop-condition': 'error',
     'no-unreachable-loop'         : 'error',
+    'no-useless-backreference'    : 'error',
     'no-useless-call'             : 'error',
-    'prefer-regex-literals'       : ['error', { disallowRedundantWrapping: true }],
     'node/handle-callback-err'    : ['error', '^(err|error)$'],
     'node/no-callback-literal'    : 'error',
     'node/no-deprecated-api'      : 'error',
@@ -28,17 +27,18 @@ module.exports = {
     'node/no-new-require'         : 'error',
     'node/no-path-concat'         : 'error',
     'node/process-exit-as-throw'  : 'error',
+    'prefer-regex-literals'       : ['error', { disallowRedundantWrapping: true }],
     'promise/param-names'         : 'error',
 
     // Selectively override certain airbnb rules from standard:
-    semi                         : ['error', 'never'],
-    'space-before-function-paren': ['error', 'always'],
     'object-curly-newline'       : ['error', { multiline: true, consistent: true }],
+    'space-before-function-paren': ['error', 'always'],
+    semi                         : ['error', 'never'],
 
     // Override/disable certain airbnb rules:
-    'no-plusplus'         : 0,
     'max-classes-per-file': 0,
     'max-len'             : 0,
+    'no-plusplus'         : 0,
     'no-underscore-dangle': [
       'error', {
         allow               : [],
