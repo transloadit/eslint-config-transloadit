@@ -6,12 +6,12 @@ module.exports = {
     node: true,
   },
   plugins: [
-    'node',
-    'promise',
-    'react',
-    'prefer-import',
     '@babel/eslint-plugin',
     'jest',
+    'node',
+    'prefer-import',
+    'promise',
+    'react',
   ],
   parser: '@babel/eslint-parser',
   parserOptions: {
@@ -79,10 +79,16 @@ module.exports = {
       },
     ],
 
+    // rules imported from the uppy repo:
+    ////////////////////////////////////////////////////////////
+    'jsx-quotes': ['error', 'prefer-double'],
+    'react/jsx-handler-names': 0,
+    'react/react-in-jsx-scope': ['error'],
+
     // rules imported from the api repo:
     ////////////////////////////////////////////////////////////
     'strict': ['error', 'global'],
-    "array-callback-return": "warn",
+    'array-callback-return': 'warn',
     'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
 
     // rules imported from the content repo:
@@ -156,8 +162,8 @@ module.exports = {
     'arrow-parens': 0, // <-- js already complains if you don't add parens when you must. adding these seems superfluous to me, like adding semicolons when you don't have to, and a linter/parse error has your back
     'operator-linebreak': ['error', 'before'], // <-- easier to see if it is before, to me
     'newline-per-chained-call': 0, // <-- 3 are allowed, but then autofix introduces a cut-off for the fourth. it's weird. let's leave this up to the dev
-    "react/display-name": 0, // <-- autofix sprinkles parse errors in our code like /home/kvz/code/content/_assets/javascripts/langEn.js: Unexpected token, expected "," (52:51)
-    "react/jsx-filename-extension": 0, // <-- we're super heavy users of jsx in .js
+    'react/display-name': 0, // <-- autofix sprinkles parse errors in our code like /home/kvz/code/content/_assets/javascripts/langEn.js: Unexpected token, expected ',' (52:51)
+    'react/jsx-filename-extension': 0, // <-- we're super heavy users of jsx in .js
 
     // rules i can see the value of but don't want to fail on right now
     ////////////////////////////////////////////////////////////
