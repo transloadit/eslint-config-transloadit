@@ -51,10 +51,10 @@ module.exports = {
 
     // Override/disable certain airbnb rules:
     ////////////////////////////////////////////////////////////
-    'max-classes-per-file': 0,
-    'max-len': 0,
-    'no-plusplus': 0,
-    'one-var': 0,
+    'max-classes-per-file': ['off'],
+    'max-len': ['off'],
+    'no-plusplus': ['off'],
+    'one-var': ['off'],
     'no-underscore-dangle': [
       'error', {
         allow: [],
@@ -82,7 +82,7 @@ module.exports = {
     // rules imported from the uppy repo:
     ////////////////////////////////////////////////////////////
     'jsx-quotes': ['error', 'prefer-double'],
-    'react/jsx-handler-names': 0,
+    'react/jsx-handler-names': ['off'],
     'react/react-in-jsx-scope': ['error'],
 
     // rules imported from the api repo:
@@ -136,34 +136,38 @@ module.exports = {
       },
     ],
 
-    // It's true that we'd generally like to use object.property, but this.state.formState is usually better read when we read this.state.formState['property'].
-    'dot-notation': 0,
-    camelcase: 0,
-    'no-console': 0,
-    'no-fallthrough': 0,
-    'no-multi-spaces': 0,
-    'no-multi-str': 0,
-    'no-template-curly-in-string': 0,
-    'no-useless-escape': 0,
-    'node/no-path-concat': 0,
-    'prefer-import/prefer-import-over-require': 0,
+    // It's true that we'd generally like to use object.property,
+    // but this.state.formState is usually better read when we read
+    // this.state.formState['property'].
+    'dot-notation': ['off'],
+    'camelcase': ['off'],
+    'no-console': ['off'],
+    'no-fallthrough': ['off'],
+    'no-multi-spaces': ['off'],
+    'no-multi-str': ['off'],
+    'node/no-path-concat': ['off'],
     'react/no-unused-prop-types': 'error',
-    'react/prop-types': 0,
-    'react/require-render-return': 0,
+    'react/prop-types': ['off'],
+    'react/require-render-return': ['off'],
+
+    // perhaps enable in future release?
+    'no-template-curly-in-string': ['off'],
+    'no-useless-escape': ['off'],
+    'prefer-import/prefer-import-over-require': ['off'],
 
     // rules i disagree with or had problems with
     ////////////////////////////////////////////////////////////
-    'no-underscore-dangle': 0, // <-- not sure what is the benefit, and many fails
-    'no-continue': 0, // <-- continue allows for 'early exits' vs deep nesting which reduces cognitive load
-    'arrow-body-style': 0, // <-- allowing structure sometimes can make code more readable for a single long line imho
-    'no-cond-assign': 0, // <-- can be useful with if ((m = x.match())) { // handle matches }
-    'react/jsx-closing-tag-location': 0, // <-- autofix conflicts with react/jsx-indent, causing ugly code fix in e.g. langEn.js
-    'semi-style': 0, // <-- i think `;(async ()` is an okay pattern, and its autofix conflicted with import/newline-after-import
-    'arrow-parens': 0, // <-- js already complains if you don't add parens when you must. adding these seems superfluous to me, like adding semicolons when you don't have to, and a linter/parse error has your back
+    'no-underscore-dangle': ['off'], // <-- not sure what is the benefit, and many fails
+    'no-continue': ['off'], // <-- continue allows for 'early exits' vs deep nesting which reduces cognitive load
+    'arrow-body-style': ['off'], // <-- allowing structure sometimes can make code more readable for a single long line imho
+    'no-cond-assign': ['off'], // <-- can be useful with if ((m = x.match())) { // handle matches }
+    'react/jsx-closing-tag-location': ['off'], // <-- autofix conflicts with react/jsx-indent, causing ugly code fix in e.g. langEn.js
+    'semi-style': ['off'], // <-- i think `;(async ()` is an okay pattern, and its autofix conflicted with import/newline-after-import
+    'arrow-parens': ['off'], // <-- js already complains if you don't add parens when you must. adding these seems superfluous to me, like adding semicolons when you don't have to, and a linter/parse error has your back
     'operator-linebreak': ['error', 'before'], // <-- easier to see if it is before, to me
-    'newline-per-chained-call': 0, // <-- 3 are allowed, but then autofix introduces a cut-off for the fourth. it's weird. let's leave this up to the dev
-    'react/display-name': 0, // <-- autofix sprinkles parse errors in our code like /home/kvz/code/content/_assets/javascripts/langEn.js: Unexpected token, expected ',' (52:51)
-    'react/jsx-filename-extension': 0, // <-- we're super heavy users of jsx in .js
+    'newline-per-chained-call': ['off'], // <-- 3 are allowed, but then autofix introduces a cut-off for the fourth. it's weird. let's leave this up to the dev
+    'react/display-name': ['off'], // <-- autofix sprinkles parse errors in our code like /home/kvz/code/content/_assets/javascripts/langEn.js: Unexpected token, expected ',' (52:51)
+    'react/jsx-filename-extension': ['off'], // <-- we're super heavy users of jsx in .js
 
     // rules i can see the value of but don't want to fail on right now
     ////////////////////////////////////////////////////////////
