@@ -1,5 +1,6 @@
 {
-  "extends": [
-    "airbnb"
-  ]
+  "extends": "./index.js",
+  "parserOptions": {
+    "requireConfigFile": false
+  }
 }

@@ -1,4 +1,4 @@
-/* eslint-disable spaced-comment */
+/* eslint-disable spaced-comment,key-spacing */
 module.exports = {
   extends: 'airbnb',
   env: {
@@ -174,4 +174,4 @@ module.exports = {
     'no-restricted-properties': ['warn'],
     'default-case': ['warn'],
   },
-};
+}
