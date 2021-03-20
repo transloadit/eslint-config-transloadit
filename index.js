@@ -1,3 +1,4 @@
+/* eslint-disable spaced-comment */
 module.exports = {
   extends: 'airbnb',
   env: {
@@ -38,7 +39,6 @@ module.exports = {
     'node/no-deprecated-api': 'error',
     'node/no-exports-assign': 'error',
     'node/no-new-require': 'error',
-    'node/no-path-concat': 'error',
     'node/process-exit-as-throw': 'error',
     'prefer-regex-literals': ['warn', { disallowRedundantWrapping: true }],
     'promise/param-names': 'error',
@@ -52,7 +52,6 @@ module.exports = {
     // Override/disable certain airbnb rules:
     ////////////////////////////////////////////////////////////
     'max-classes-per-file': ['off'],
-    'max-len': ['off'],
     'no-plusplus': ['off'],
     'one-var': ['off'],
     'no-underscore-dangle': [
@@ -87,9 +86,9 @@ module.exports = {
 
     // rules imported from the api repo:
     ////////////////////////////////////////////////////////////
-    'strict': ['error', 'global'],
+    strict: ['error', 'global'],
     'array-callback-return': 'warn',
-    'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
 
     // rules imported from the content repo:
     ////////////////////////////////////////////////////////////
@@ -140,7 +139,7 @@ module.exports = {
     // but this.state.formState is usually better read when we read
     // this.state.formState['property'].
     'dot-notation': ['off'],
-    'camelcase': ['off'],
+    camelcase: ['off'],
     'no-console': ['off'],
     'no-fallthrough': ['off'],
     'no-multi-spaces': ['off'],
@@ -157,7 +156,6 @@ module.exports = {
 
     // rules i disagree with or had problems with
     ////////////////////////////////////////////////////////////
-    'no-underscore-dangle': ['off'], // <-- not sure what is the benefit, and many fails
     'no-continue': ['off'], // <-- continue allows for 'early exits' vs deep nesting which reduces cognitive load
     'arrow-body-style': ['off'], // <-- allowing structure sometimes can make code more readable for a single long line imho
     'no-cond-assign': ['off'], // <-- can be useful with if ((m = x.match())) { // handle matches }
