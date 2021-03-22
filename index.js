@@ -124,12 +124,11 @@ module.exports = {
       },
     ],
 
-    // It's true that we'd generally like to use object.property,
+    // Evgenia: It's true that we'd generally like to use object.property,
     // but this.state.formState is usually better read when we read
     // this.state.formState['property'].
     'camelcase': ['off'],
     'dot-notation': ['off'],
-    'no-fallthrough': ['off'],
     'no-multi-spaces': ['off'],
     'no-multi-str': ['off'],
     'node/no-path-concat': ['off'],
@@ -137,9 +136,7 @@ module.exports = {
 
     // perhaps enable in future release?
     'no-cond-assign': ['off'], // <-- can be useful with if ((m = x.match())) { // handle matches }
-    'no-template-curly-in-string': ['off'],
     'prefer-import/prefer-import-over-require': ['off'],
-    'react/jsx-closing-tag-location': ['off'], // <-- autofix conflicts with react/jsx-indent, causing ugly code fix in e.g. langEn.js
 
     // rules i disagree with or had problems with
     ////////////////////////////////////////////////////////////
