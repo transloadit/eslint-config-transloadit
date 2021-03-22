@@ -118,9 +118,9 @@ module.exports = {
       {
         arrays: 'always-multiline',
         objects: 'always-multiline',
-        imports: 'never',
-        exports: 'never',
-        functions: 'never',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'always-multiline',
       },
     ],
 
