@@ -26,22 +26,22 @@ module.exports = {
     // https://github.com/transloadit/node-sdk/issues/90
     ////////////////////////////////////////////////////////////
     'accessor-pairs': ['error', { setWithoutGet: true, enforceForClassMembers: true }],
-    'default-case-last': 'error',
+    'default-case-last': ['error'],
     'no-extra-parens': ['error', 'functions'],
-    'no-import-assign': 'error',
-    'no-loss-of-precision': 'error',
-    'no-unmodified-loop-condition': 'error',
-    'no-unreachable-loop': 'warn',
-    'no-useless-backreference': 'error',
-    'no-useless-call': 'error',
+    'no-import-assign': ['error'],
+    'no-loss-of-precision': ['error'],
+    'no-unmodified-loop-condition': ['error'],
+    'no-unreachable-loop': ['warn'],
+    'no-useless-backreference': ['error'],
+    'no-useless-call': ['error'],
     'node/handle-callback-err': ['error', '^(err|error)$'],
-    'node/no-callback-literal': 'error',
-    'node/no-deprecated-api': 'error',
-    'node/no-exports-assign': 'error',
-    'node/no-new-require': 'error',
-    'node/process-exit-as-throw': 'error',
+    'node/no-callback-literal': ['error'],
+    'node/no-deprecated-api': ['error'],
+    'node/no-exports-assign': ['error'],
+    'node/no-new-require': ['error'],
+    'node/process-exit-as-throw': ['error'],
     'prefer-regex-literals': ['warn', { disallowRedundantWrapping: true }],
-    'promise/param-names': 'error',
+    'promise/param-names': ['error'],
 
     // Selectively override certain airbnb rules from standard:
     ////////////////////////////////////////////////////////////
@@ -74,13 +74,10 @@ module.exports = {
     // rules imported from the uppy repo:
     ////////////////////////////////////////////////////////////
     'jsx-quotes': ['error', 'prefer-double'],
-    'react/jsx-handler-names': ['off'],
-    'react/react-in-jsx-scope': ['error'],
 
     // rules imported from the api repo:
     ////////////////////////////////////////////////////////////
     'strict': ['error', 'global'],
-    'array-callback-return': 'warn',
     'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
 
     // rules imported from the content repo:
@@ -138,7 +135,7 @@ module.exports = {
     'no-multi-spaces': ['off'],
     'no-multi-str': ['off'],
     'node/no-path-concat': ['off'],
-    'react/no-unused-prop-types': 'error',
+    'react/no-unused-prop-types': ['error'],
     'react/prop-types': ['off'],
     'react/require-render-return': ['off'],
 
