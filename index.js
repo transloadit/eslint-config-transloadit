@@ -54,14 +54,7 @@ module.exports = {
     'max-classes-per-file': ['off'],
     'no-plusplus': ['off'],
     'one-var': ['off'],
-    'no-underscore-dangle': [
-      'error', {
-        allow: [],
-        allowAfterThis: true,
-        allowAfterSuper: true,
-        enforceInMethodNames: false,
-      },
-    ],
+    'no-underscore-dangle': ['off'],
     'no-restricted-syntax': [
       'error',
       {
