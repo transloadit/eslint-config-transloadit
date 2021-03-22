@@ -1,4 +1,4 @@
-/* eslint-disable spaced-comment,key-spacing */
+/* eslint-disable spaced-comment,key-spacing,quote-props */
 module.exports = {
   extends: 'airbnb',
   env: {
@@ -47,7 +47,7 @@ module.exports = {
     ////////////////////////////////////////////////////////////
     'object-curly-newline': ['error', { multiline: true, consistent: true }],
     'space-before-function-paren': ['error', 'always'],
-    semi: ['error', 'never'],
+    'semi': ['error', 'never'],
 
     // Override/disable certain airbnb rules:
     ////////////////////////////////////////////////////////////
@@ -86,7 +86,7 @@ module.exports = {
 
     // rules imported from the api repo:
     ////////////////////////////////////////////////////////////
-    strict: ['error', 'global'],
+    'strict': ['error', 'global'],
     'array-callback-return': 'warn',
     'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
 
@@ -116,7 +116,7 @@ module.exports = {
         ignoreTemplateLiterals: true,
       },
     ],
-    quotes: [
+    'quotes': [
       'error',
       'single',
       {
@@ -139,7 +139,7 @@ module.exports = {
     // but this.state.formState is usually better read when we read
     // this.state.formState['property'].
     'dot-notation': ['off'],
-    camelcase: ['off'],
+    'camelcase': ['off'],
     'no-console': ['off'],
     'no-fallthrough': ['off'],
     'no-multi-spaces': ['off'],
