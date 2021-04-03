@@ -10,7 +10,6 @@ module.exports = {
     '@babel/eslint-plugin',
     'jest',
     'node',
-    'prefer-import',
     'promise',
     'react',
   ],
@@ -136,7 +135,7 @@ module.exports = {
 
     // perhaps enable in future release?
     'no-cond-assign': ['off'], // <-- can be useful with if ((m = x.match())) { // handle matches }
-    'prefer-import/prefer-import-over-require': ['off'],
+    'import/no-commonjs': ['off'],
 
     // rules i disagree with or had problems with
     ////////////////////////////////////////////////////////////
