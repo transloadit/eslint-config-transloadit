@@ -2,19 +2,29 @@
 
 Transloadit eslint rules
 
-[eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base), with a dash of [standard](https://github.com/standard/standard) and a pinch of [transloadit](https://github.com/transloadit) 🤏
+[eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb), with a dash of [standard](https://github.com/standard/standard) and a pinch of [transloadit](https://github.com/transloadit) 🤏
 
 ## Installing
 
-Install the correct versions of each package as `devDependencies`, which are listed by the command:
+1. Install the correct versions of each package, which are listed by the command:
 
-```
-yarn add -D eslint-config-transloadit
-```
+  ```sh
+  npm info "eslint-config-transloadit@latest" peerDependencies
+  ```
 
-Add `"extends": "transloadit"` to your `.eslintrc`
+  If using **npm 5+**, use this shortcut
 
-See also [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
+  ```sh
+  npx install-peerdeps --dev eslint-config-transloadit
+  ```
+
+  If using **yarn**, you can also use the shortcut described above if you have npm 5+ installed on your machine, as the command will detect that you are using yarn and will act accordingly.
+
+2. `npm install --save-dev eslint-config-transloadit`
+
+3. Add `"extends": "transloadit"` to your `.eslintrc`
+
+See also [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
 
 ## Releasing
 
