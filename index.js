@@ -1,6 +1,9 @@
 /* eslint-disable spaced-comment,key-spacing,quote-props */
 module.exports = {
-  extends: 'airbnb',
+  extends: [
+    'airbnb',
+    'airbnb/hooks',
+  ],
   env: {
     es6: true,
     jest: true,
