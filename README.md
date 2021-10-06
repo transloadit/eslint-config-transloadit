@@ -26,6 +26,27 @@ Transloadit eslint rules
 
 See also [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
 
+## Version 2
+
+### Newly enforced rules
+
+When upgrading to v2, these can be overridden and set to `warn` in consuming projects at first:
+
+- [Rule of Hooks](https://github.com/airbnb/javascript/blob/1eadb93e377da1e56c3f91f26610e5d0a00738a9/packages/eslint-config-airbnb/rules/react-hooks.js) https://reactjs.org/docs/hooks-rules.html
+- `no-unreachable-loop`
+- `max-classes-per-file` is set to 1 (from airbnb)
+- `one-var` (from airbnb)
+- `no-underscore-dangle` (from airbnb)
+- `comma-dangle` now also enforces: `"functions: 'always-multiline'"` (from airbnb)
+- `operator-linebreak` is now `none` (from airbnb), meaning there can be no linebreak before or after `=`
+
+### No longer enforced rules
+`off`/`warn`-overrides for these inside consuming projects can be deleted:
+- `react/jsx-one-expression-per-line`
+- `no-await-in-loop`
+
+See also https://github.com/transloadit/eslint-config-transloadit/pull/12/commits/2200e5f227dcc3893d5d81a80ca35e546c43bc06
+
 ## Releasing
 
 - `npm i -g np`

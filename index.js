@@ -33,7 +33,7 @@ module.exports = {
     'no-import-assign': ['error'],
     'no-loss-of-precision': ['error'],
     'no-unmodified-loop-condition': ['error'],
-    'no-unreachable-loop': ['warn'],
+    'no-unreachable-loop': ['error'],
     'no-useless-backreference': ['error'],
     'no-useless-call': ['error'],
     'node/handle-callback-err': ['error', '^(err|error)$'],
@@ -53,10 +53,7 @@ module.exports = {
 
     // Override/disable certain airbnb rules:
     ////////////////////////////////////////////////////////////
-    'max-classes-per-file': ['off'],
     'no-plusplus': ['off'],
-    'one-var': ['off'],
-    'no-underscore-dangle': ['off'],
     'no-restricted-syntax': [
       'error',
       {
@@ -72,10 +69,6 @@ module.exports = {
         message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
       },
     ],
-
-    // rules imported from the uppy repo:
-    ////////////////////////////////////////////////////////////
-    'jsx-quotes': ['error', 'prefer-double'],
 
     // rules imported from the api repo:
     ////////////////////////////////////////////////////////////
@@ -115,16 +108,6 @@ module.exports = {
         allowTemplateLiterals: true,
       },
     ],
-    'comma-dangle': [
-      'error',
-      {
-        arrays: 'always-multiline',
-        objects: 'always-multiline',
-        imports: 'always-multiline',
-        exports: 'always-multiline',
-        functions: 'never', // @TODO <-- for a next major, consider always-multiline
-      },
-    ],
 
     // Evgenia: It's true that we'd generally like to use object.property,
     // but this.state.formState is usually better read when we read
@@ -146,9 +129,10 @@ module.exports = {
     'arrow-parens': ['off'], // <-- js already complains if you don't add parens when you must. adding these seems superfluous to me, like adding semicolons when you don't have to, and a linter/parse error has your back
     'newline-per-chained-call': ['off'], // <-- 3 are allowed, but then autofix introduces a cut-off for the fourth. it's weird. let's leave this up to the dev
     'no-continue': ['off'], // <-- continue allows for 'early exits' vs deep nesting which reduces cognitive load
-    'operator-linebreak': ['error', 'before'], // <-- easier to see if it is before, to me
     'react/display-name': ['off'], // <-- autofix sprinkles parse errors in our code like /home/kvz/code/content/_assets/javascripts/langEn.js: Unexpected token, expected ',' (52:51)
     'react/jsx-filename-extension': ['off'], // <-- we're super heavy users of jsx in .js
     'semi-style': ['off'], // <-- i think `;(async ()` is an okay pattern, and its autofix conflicted with import/newline-after-import
+    'react/jsx-one-expression-per-line': ['off'], // <-- This one is a bit annoying
+    'no-await-in-loop': ['off'], // <-- Let's disable it and see if it bites us
   },
 }
