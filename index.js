@@ -132,8 +132,6 @@ module.exports = {
     'react/display-name': ['off'], // <-- autofix sprinkles parse errors in our code like /home/kvz/code/content/_assets/javascripts/langEn.js: Unexpected token, expected ',' (52:51)
     'react/jsx-filename-extension': ['off'], // <-- we're super heavy users of jsx in .js
     'semi-style': ['off'], // <-- i think `;(async ()` is an okay pattern, and its autofix conflicted with import/newline-after-import
-
-    // Added in v2:
     'react/jsx-one-expression-per-line': ['off'], // <-- This one is a bit annoying
     'no-await-in-loop': ['off'], // <-- Let's disable it and see if it bites us
   },
