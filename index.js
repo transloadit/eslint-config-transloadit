@@ -135,5 +135,12 @@ module.exports = {
     'react/jsx-one-expression-per-line': ['off'], // <-- This one is a bit annoying
     'no-await-in-loop': ['off'], // <-- Let's disable it and see if it bites us
     'no-underscore-dangle': ['off'], // We use _ in almost all repos. See discussion here: https://github.com/transloadit/botty/pull/41#discussion_r738022104
+
+    'no-implicit-coercion': [
+      'error',
+      {
+        disallowTemplateShorthand: true,
+      },
+    ],
   },
 }
