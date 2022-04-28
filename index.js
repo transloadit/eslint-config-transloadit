@@ -105,7 +105,6 @@ module.exports = {
       'single',
       {
         avoidEscape: true,
-        allowTemplateLiterals: true,
       },
     ],
 
