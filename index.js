@@ -10,19 +10,11 @@ module.exports = {
     node: true,
   },
   plugins: [
-    '@babel/eslint-plugin',
     'jest',
     'node',
     'promise',
     'react',
   ],
-  parser: '@babel/eslint-parser',
-  parserOptions: {
-    ecmaVersion: 2020,
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
   rules: {
     // Include rules from standard that are not in airbnb:
     // https://github.com/transloadit/node-sdk/issues/90
