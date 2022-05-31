@@ -47,6 +47,16 @@ When upgrading to v2, these can be overridden and set to `warn` in consuming pro
 
 See also https://github.com/transloadit/eslint-config-transloadit/pull/12/commits/2200e5f227dcc3893d5d81a80ca35e546c43bc06
 
+## Version 3 (unreleased)
+
+### Breaking changes
+
+- `@babel/eslint-parser` is no longer the default. If you are using syntax
+  that's not supported by the default parser of the ESLint version you are
+  using, you need to add `parser: '@babel/eslint-parser'` to your `.eslintrc.js`
+  and adjust the [`parserOptions`](https://eslint.org/docs/user-guide/configuring/language-options#specifying-parser-options)
+  property. You probably also want to add `@babel/eslint-plugin` to the list of plugins.
+
 ## Releasing
 
 - `npm i -g np`
