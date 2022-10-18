@@ -14,6 +14,7 @@ module.exports = {
     'node',
     'promise',
     'react',
+    'align-assignments',
   ],
   rules: {
     // Include rules from standard that are not in airbnb:
@@ -61,6 +62,10 @@ module.exports = {
         message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
       },
     ],
+
+    // added features:
+    ////////////////////////////////////////////////////////////
+    'align-assignments/align-assignments': ['error', { requiresOnly: false }],
 
     // rules imported from the api repo:
     ////////////////////////////////////////////////////////////
