@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-transloadit",
+  "name": "eslint-plugin-transloadit",
   "version": "2.0.0",
   "description": "Transloadit eslint rules",
   "main": "index.js",
@@ -10,9 +10,9 @@
     "node": ">= 10"
   },
   "scripts": {
-    "fix": "eslint . --fix",
+    "fix": "eslint . --fix --rulesdir rules",
     "test": "node --test",
-    "lint": "eslint ."
+    "lint": "eslint . --cache --rulesdir rules"
   },
   "dependencies": {
     "eslint-config-airbnb": "^18.2.1"

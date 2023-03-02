@@ -133,5 +133,7 @@ module.exports = {
         disallowTemplateShorthand: true,
       },
     ],
+
+    'no-useless-iife': 'error',
   },
 }
