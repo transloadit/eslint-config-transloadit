@@ -745,13 +745,6 @@ eslint-config-airbnb@^18.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-transloadit@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-transloadit/-/eslint-config-transloadit-2.0.0.tgz#6ecc08c29391e4f5d105b663fe682f5de1bb1a10"
-  integrity sha512-EQFqI1AW6frh3gYFLMBxzjIkIPp13rdN3s6yfjWvDy4qVhuRd0ItmDsadu+zwdPWTcI69apzhTzyriHhmaBTbg==
-  dependencies:
-    eslint-config-airbnb "^18.2.1"
-
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.6.tgz#4048b958395da89668252001dbd9eca6b83bacbd"
@@ -862,13 +855,6 @@ eslint-plugin-react@^7.22.0:
     resolve "^2.0.0-next.3"
     semver "^6.3.0"
     string.prototype.matchall "^4.0.5"
-
-eslint-plugin-transloadit@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-transloadit/-/eslint-plugin-transloadit-0.1.2.tgz#f9b5959d7180da9d24eefecbcfb179a509b91cc2"
-  integrity sha512-tgQTa/WZgaZI6DdDTsN2PYn6XuHPHulsiqrub6/uG+yKg419nvF9kkmlqgA5aK9bVQp5cDWKAS9hkNhrzal70w==
-  dependencies:
-    eslint-config-transloadit "^2.0.0"
 
 eslint-rule-composer@^0.3.0:
   version "0.3.0"
