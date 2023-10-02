@@ -856,6 +856,11 @@ eslint-plugin-react@^7.22.0:
     semver "^6.3.0"
     string.prototype.matchall "^4.0.5"
 
+eslint-plugin-transloadit@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-transloadit/-/eslint-plugin-transloadit-0.2.0.tgz#969f4ec508cf537d68edfd43b2da4fb42a491076"
+  integrity sha512-mxkQWDFvisRkOLClwkzGonhKhki0uK7QjTn92rzJ0Sw8UWVNYBIYN867+skflQeHZ/ZsyjhIuYxBGsoTAZPsvQ==
+
 eslint-rule-composer@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/eslint-rule-composer/-/eslint-rule-composer-0.3.0.tgz#79320c927b0c5c0d3d3d2b76c8b4a488f25bbaf9"

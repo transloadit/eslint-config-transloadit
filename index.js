@@ -14,6 +14,7 @@ module.exports = {
     'node',
     'promise',
     'react',
+    'transloadit',
   ],
   rules: {
     // Include rules from standard that are not in airbnb:
@@ -133,5 +134,7 @@ module.exports = {
         disallowTemplateShorthand: true,
       },
     ],
+
+    'transloadit/no-useless-iife': 'error',
   },
 }
