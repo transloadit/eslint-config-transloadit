@@ -47,7 +47,7 @@ When upgrading to v2, these can be overridden and set to `warn` in consuming pro
 
 See also https://github.com/transloadit/eslint-config-transloadit/pull/12/commits/2200e5f227dcc3893d5d81a80ca35e546c43bc06
 
-## Version 3 (unreleased)
+## Version 3
 
 ### Breaking changes
 
@@ -56,6 +56,12 @@ See also https://github.com/transloadit/eslint-config-transloadit/pull/12/commit
   using, you need to add `parser: '@babel/eslint-parser'` to your `.eslintrc.js`
   and adjust the [`parserOptions`](https://eslint.org/docs/user-guide/configuring/language-options#specifying-parser-options)
   property. You probably also want to add `@babel/eslint-plugin` to the list of plugins.
+- Remove peer dependencies `@babel/core`, `@babel/eslint-parser` and `@babel/eslint-plugin`
+- Add `peerDependency` `eslint-plugin-transloadit` and added rule `transloadit/no-useless-iife`
+- Upgrade `peerDependency` `eslint-plugin-promise` from 4 to 6
+- Remove `eslint-plugin-jest`
+- Upgrade `eslint-config-airbnb` from 18 to 19
+- Add rule `no-implicit-coercion`
 
 ## Releasing
 
