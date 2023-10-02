@@ -11,7 +11,7 @@
   },
   "scripts": {
     "fix": "eslint . --fix",
-    "test": "true",
+    "test": "yarn lint",
     "lint": "eslint ."
   },
   "dependencies": {
