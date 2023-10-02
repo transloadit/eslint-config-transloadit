@@ -28,9 +28,6 @@
     "eslint-plugin-transloadit": "^0.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.0",
-    "@babel/eslint-parser": "^7.22.15",
-    "@babel/eslint-plugin": "^7.22.10",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
