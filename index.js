@@ -10,7 +10,6 @@ module.exports = {
     node: true,
   },
   plugins: [
-    'jest',
     'node',
     'promise',
     'react',
