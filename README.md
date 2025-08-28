@@ -1,5 +1,7 @@
 # eslint-config-transloadit
 
+> Warning. This repo is deprecated as Transloadit has switched to using Biome
+
 Transloadit eslint rules
 
 [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb), with a dash of [standard](https://github.com/standard/standard) and a pinch of [transloadit](https://github.com/transloadit) 🤏
